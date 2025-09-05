@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neat Page</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles3.css" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap" rel="stylesheet" />
+
+  <!-- Librerías -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__left">
+          <span class="navbar__mesa"></span>
+        </div>
+        <div class="navbar__right">
+          <a href="Menu.html" class="navbar__link">Menú</a>
+          <a href="#" class="navbar__icon" onclick="AgregarCarrito()">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+        </div>
+      </nav>
+      
+  <div id="app">
+    <header class="container">
+      <h2 class="container__headline">{{ pregunta }}</h2>
+    </header>
+
+    <!-- Carrusel con fondo dinámico -->
+    <section id="hero-carousel" class="container hero">
+      <div class="hero__inner">
+        <div class="hero__images">
+          <img
+            class="hero__image"
+            src="imagenes/tony.jpg"
+            alt="Neat Image"
+          />
+        </div>
+        <div class="hero__content">
+          <div class="hero__headline">
+            <span v-html="mensaje"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Sección de fade -->
+  <section class="fade-section">
+    <section class="gift-card">
+      <div class="gift-card__content">
+        <div class="gift-card__image">
+          <img src="imagenes/congo.jpg" alt="Bebida refrescante" />
+        </div>
+        <div class="gift-card__text">
+          <h2>BEBIDAS PREMIUM</h2>
+          <p>Refresca tu día con nuestras bebidas exclusivas, ideales para compartir o regalar.</p>
+          
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <section class="fade-section">
+    <section class="newsletter">
+      <div class="newsletter__content">
+        <p class="newsletter__label">DESCÚBRELO HOY</p>
+        <h2 class="newsletter__title">VIVE EL SABOR <span class="highlight">REAL</span></h2>
+        <p class="newsletter__text">
+          Ven a disfrutar de las delicias únicas donde *Moñín* cocina con pasión. 
+          Explora sabores auténticos, recetas caseras y el ambiente perfecto para compartir. 
+          ¿Listo para una experiencia que tu paladar no olvidará?
+        </p>
+       
+      </div>
+
+      <div class="newsletter__image">
+        <img src="imagenes/comiendo.png" alt="Plants" style="width: 350px; height: auto;" />
+      </div>
+    </section>
+  </section>
+  </section>
+
+  <section id="background-carousel" class="background-carousel">
+    <div class="carousel-overlay">
+      <h2 style="color: white;">Descubre el sabor auténtico</h2>
+      <p>Una experiencia culinaria como ninguna otra</p>
+    </div>
+  </section>
+
+  <!-- Sección de fade -->
+  <section class="fade-section">
+    <section class="gift-card">
+      <div class="gift-card__content">
+        <div class="gift-card__image">
+          <img style="width: 300px" src="imagenes/personal.jpg" alt="Un poco de Biografia" />
+        </div>
+        <div class="gift-card__text">
+          <h4>Fundador</h4>
+          <h2>Anthony Fuentes</h2>
+          <p style="text-align: center;">
+            Anthony es un joven alegre y extrovertido, apasionado por conectar con las personas. Con gratitud hacia Dios, ha superado desafíos con fe y determinación, dejando huella en cada proyecto al servir con autenticidad y entusiasmo.
+          </p>
+          <h2 class="newsletter__title"> <span class="highlight"> "QUIERAS O NO"</span></h2>
+        </div>
+      </div>
+    </section>
+  </section>
+  
+  
+
+  <section class="fade-section">
+    <footer class="site-footer">
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h4>SOBRE NOSOTROS</h4>
+          <ul>
+            <li>LA EXPERIENCIA REÁL</li>
+            <li>NUESTRA HISTORIA</li>
+            <li>EL EQUIPO</li>
+            <li>PRENSA Y PREMIOS</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>MENÚS</h4>
+          <ul>
+            <li>ALMUERZO</li>
+            <li>CENA</li>
+            <li>POSTRES</li>
+            <li>BEBIDAS</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>CONTÁCTANOS</h4>
+          <ul>
+            <li>RESERVACIONES</li>
+            <li>CONTÁCTANOS</li>
+          </ul>
+        </div>
+        <div class="footer-column contact">
+          <h4>LLÁMANOS</h4>
+          <p class="phone">+502 5523-3222</p>
+          <button class="book-button">RESERVAR MESA</button>
+
+          <div class="social-icons">
+            <a href="https://www.facebook.com/denilson.dominguez.3/about"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Logo_de_Facebook.png/250px-Logo_de_Facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/2491px-Logo_of_Twitter.svg.png" alt="Twitter"></a>
+            <a href="#"><img src="https://img.freepik.com/premium-vector/instagram-vector-logo-icon-social-media-logotype_901408-392.jpg?semt=ais_hybrid&w=740" alt="Yelp"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="cards" style="font-size: 2rem; color: white; display: flex; gap: 20px;">
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fab fa-cc-visa"></i>
+          <i class="fab fa-cc-amex"></i>
+          <i class="fab fa-cc-discover"></i>
+        </div>
+        <p>© 2025 Via Reál — Todos los derechos reservados.</p>
+        <p>Ubícanos en los barrios <strong>El Rastro</strong> y <strong>El Estrecho</strong>, donde el sabor auténtico cobra vida.</p>
+        <p>Diseñado y desarrollado por <a href="#">Jacf II </a></p>
+      </div>
+    </footer>
+  </section>
+
+   <!-- Script de fondo dinámico -->
+
+  
+</body>
+<script src="script.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const mesa = localStorage.getItem("mesa") || "Sin asignar";
+      document.getElementById("numeroMesa").textContent = mesa;
+    });
+
+    function agregarAlCarrito() {
+      const titulo = document.getElementById('detalle-titulo').innerText;
+      const checkboxes = document.querySelectorAll('#detalle-ingredientes input[type="checkbox"]');
+      const seleccionados = [];
+      const excluidos = [];
+    
+      checkboxes.forEach(cb => {
+        const ingrediente = cb.nextSibling.textContent;
+        if (cb.checked) {
+          seleccionados.push(ingrediente);
+        } else {
+          excluidos.push(ingrediente);
+        }
+      });
+    
+      const contenido = `
+        <strong>${titulo}</strong><br>
+        <span>Con:</span>
+        <ul style="padding-left: 18px; margin-top: 6px;">
+          ${seleccionados.map(ing => `<li>${ing}</li>`).join("")}
+        </ul>
+        ${excluidos.length > 0 ? `
+          <span style="color:#c00;">Sin:</span>
+          <ul style="padding-left: 18px; margin-top: 6px;">
+            ${excluidos.map(ing => `<li>${ing}</li>`).join("")}
+          </ul>` : ''}
+      `;
+    
+      document.getElementById('contenido-carrito').innerHTML = contenido;
+      document.getElementById('carrito').style.display = 'block';
+    }
+    
+  </script>
+
+ 
+
+</html>

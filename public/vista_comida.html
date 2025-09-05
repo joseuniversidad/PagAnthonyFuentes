@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comida</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #000000; /* Fondo negro */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        font-family: sans-serif;
+      }
+
+      .menu-img {
+        width: 90%;
+        max-width: 600px;
+        margin: 40px 0 20px 0; /* separación arriba y abajo */
+        border-radius: 16px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        object-fit: cover;
+        transition: transform 0.3s;
+      }
+
+      .menu-img:hover {
+        transform: scale(1.03);
+      }
+
+      .btn-danger {
+        background-color: #f97316; /* naranja brillante */
+        border: none;
+        border-radius: 30px;
+        padding: 12px 36px;
+        font-size: 1.2rem;
+        color: #ffffff;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .btn-danger:hover {
+        background-color: #ea580c;
+        box-shadow: 0 8px 15px rgba(249, 115, 22, 0.3);
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Imagen del menú -->
+    <img src="imagenes/Comidame.png" alt="Menú" class="menu-img" />
+
+    <!-- Botón de regresar -->
+    <div class="text-center mb-10">
+      <a href="Menu.html">
+        <button type="button" class="btn-danger">Regresar</button>
+      </a>
+    </div>
+  </body>
+</html>

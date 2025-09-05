@@ -1,0 +1,14 @@
+{
+  "name": "prueba",
+  "version": "1.0.0",
+  "description": "Proyecto con Express",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Jose Cayetano",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

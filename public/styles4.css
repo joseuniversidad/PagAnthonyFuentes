@@ -1,0 +1,339 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fdfcfb url('https://thumbs.dreamstime.com/b/fondo-negro-claro-abstracto-textura-para-el-dise%C3%B1o-162174635.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+  }
+  
+
+.menu-section {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.menu-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.menu-title h1 {
+  font-size: 40px;
+  letter-spacing: 1px;
+  color: #222;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.menu-title h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #2d7b2d;
+  margin: 12px auto 0;
+  border-radius: 4px;
+}
+
+.menu-item-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    gap: 20px;
+    flex-wrap: wrap;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease;
+    border-radius: 16px;
+  }
+  
+  .menu-item-wrapper:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+    background-color: #ffe6cc; /* pastel durazno */
+  }
+  
+.menu-item-wrapper.reverse {
+  flex-direction: row-reverse;
+}
+
+.menu-image {
+  flex: 1 1 300px;
+  min-width: 300px;
+  max-width: 400px;
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 18px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.menu-image:hover {
+  transform: scale(1.05);
+  filter: brightness(0.9);
+}
+
+.menu-content {
+    flex: 1 1 300px;
+    background: #fef9f4; /* pastel muy claro */
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    min-width: 300px;
+    transition: background 0.4s ease, transform 0.3s ease;
+  }
+  
+
+.menu-content h2 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.menu-content p {
+  margin: 0 0 10px;
+  font-size: 15.5px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.price {
+  background: #eef2ec;
+  padding: 8px 14px;
+  border-radius: 8px;
+  display: inline-block;
+  font-weight: 600;
+  color: #2d7b2d;
+  font-size: 16px;
+}
+
+.price:hover {
+    box-shadow: 0 0 10px rgba(45, 123, 45, 0.3);
+    background: #e3f4e3;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #detalle-platillo button.cerrar {
+    font-size: 26px;
+    background: #f0f0f0;
+    border-radius: 50%;
+    padding: 6px 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  #detalle-platillo button.cerrar:hover {
+    background: #ffcccc;
+    transform: rotate(90deg);
+  }
+  
+  button.agregar::before {
+    content: "🛒 ";
+    font-size: 18px;
+  }
+
+#detalle-platillo {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffffee;
+  z-index: 1000;
+  overflow-y: auto;
+  padding: 40px 20px;
+}
+
+#detalle-platillo > div {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#detalle-platillo button.cerrar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+}
+
+#detalle-imagen {
+  height: 200px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+#detalle-platillo h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #1a1a1a;
+}
+
+#detalle-platillo p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+#detalle-ingredientes {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+#detalle-ingredientes li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+#detalle-ingredientes input[type="checkbox"] {
+  margin-right: 12px;
+  transform: scale(1.3);
+}
+
+#detalle-platillo button.agregar {
+    padding: 14px 28px;
+    background: #c1eac5; /* pastel verde */
+    color: #1a1a1a;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 17px;
+    margin-top: 25px;
+    transition: background 0.3s ease;
+  }
+  
+  #detalle-platillo button.agregar:hover {
+    background: #a8deb1; /* verde más saturado */
+  }
+  
+
+  @media (max-width: 768px) {
+    .menu-item-wrapper {
+      flex-direction: column !important;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 24px;
+      width: 100%;
+    }
+  
+    .menu-image {
+      width: 90%;
+      height: 200px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+  
+    .menu-content {
+      width: 95%;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 12px;
+    }
+  
+    .menu-content h2 {
+      font-size: 20px;
+      margin-top: 25px;
+    }
+  
+    .menu-content p {
+      font-size: 18px;
+      margin-bottom: 14px;
+    }
+  
+    .price {
+      font-size: 16px;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  
+    .menu-title h1 {
+      font-size: 26px;
+    }
+  
+    #detalle-platillo > div {
+      padding: 20px;
+      max-width: 90%;
+    }
+  
+    #detalle-platillo h2,
+    #detalle-platillo p {
+      text-align: center;
+      font-size: 18px;
+    }
+  
+    #detalle-platillo button.agregar {
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+    }
+  
+    #detalle-platillo button.cerrar {
+      top: 16px;
+      right: 16px;
+    }
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e0e0e0;
+    padding: 12px 24px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar__mesa {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .navbar__right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .navbar__link {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar__link:hover {
+    color: #ff6600;
+  }
+  
+  .navbar__icon {
+    color: #333;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar__icon:hover {
+    color: #ff6600;
+  }
